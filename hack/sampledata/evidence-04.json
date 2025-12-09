@@ -1,0 +1,49 @@
+{
+  "activity_id": 0,
+  "activity_name": "",
+  "category_name": "Application Activity",
+  "category_uid": 6,
+  "class_name": "Scan Activity",
+  "class_uid": 6007,
+  "cloud": {
+    "provider": ""
+  },
+  "event_day": 0,
+  "metadata": {
+    "log_provider": "gatekeeper",
+    "product": {
+      "name": "gatekeeper",
+      "vendor_name": "open-policy-agent",
+      "version": "v3.14.0"
+    },
+    "uid": "evidence-04",
+    "version": "v3.14.0"
+  },
+  "num_files": 1,
+  "observables": [
+    {
+      "name": "evidence.json",
+      "type": "File Name",
+      "type_id": 7
+    }
+  ],
+  "osint": null,
+  "scan": {
+    "type_id": 0
+  },
+  "severity": "low",
+  "severity_id": 0,
+  "status": "not_run",
+  "status_id": 0,
+  "time": 1765287070000,
+  "type_name": "",
+  "type_uid": 60070,
+  "policy": {
+    "data": "{\"name\":\"Scan on Push\",\"description\":\"Automated security scanning on code push\",\"sources\":[{\"name\":\"OSPS-QA-10.05\",\"policy\":[\"github.com/org/ci-policies\"],\"ruleData\":{},\"config\":{\"include\":[\"scan_on_push\"]}}]}",
+    "desc": "Automated security scanning on code push",
+    "name": "Scan on Push",
+    "uid": "scan_on_push"
+  },
+  "action": "observed",
+  "action_id": 3
+}
