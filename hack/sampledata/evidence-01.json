@@ -1,0 +1,49 @@
+{
+  "activity_id": 0,
+  "activity_name": "",
+  "category_name": "Application Activity",
+  "category_uid": 6,
+  "class_name": "Scan Activity",
+  "class_uid": 6007,
+  "cloud": {
+    "provider": ""
+  },
+  "event_day": 0,
+  "metadata": {
+    "log_provider": "conforma",
+    "product": {
+      "name": "conforma",
+      "vendor_name": "conforma",
+      "version": "v0.8.6"
+    },
+    "uid": "evidence-01",
+    "version": "v0.8.6"
+  },
+  "num_files": 1,
+  "observables": [
+    {
+      "name": "evidence.json",
+      "type": "File Name",
+      "type_id": 7
+    }
+  ],
+  "osint": null,
+  "scan": {
+    "type_id": 0
+  },
+  "severity": "high",
+  "severity_id": 0,
+  "status": "success",
+  "status_id": 1,
+  "time": 1765297869503,
+  "type_name": "",
+  "type_uid": 60070,
+  "policy": {
+    "data": "{\"name\":\"GitHub Branch Protection\",\"description\":\"Enforce branch protection rules\",\"sources\":[{\"name\":\"OSPS-QA-07.01\",\"policy\":[\"github.com/conforma/policy\"],\"ruleData\":{\"main_branch_min_approvals\":\"1\"},\"config\":{\"include\":[\"github_branch_protection\"]}}]}",
+    "desc": "Enforce branch protection rules",
+    "name": "GitHub Branch Protection",
+    "uid": "github_branch_protection"
+  },
+  "action": "observed",
+  "action_id": 3
+}
