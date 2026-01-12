@@ -1,0 +1,49 @@
+{
+  "activity_id": 0,
+  "activity_name": "",
+  "category_name": "Application Activity",
+  "category_uid": 6,
+  "class_name": "Scan Activity",
+  "class_uid": 6007,
+  "cloud": {
+    "provider": ""
+  },
+  "event_day": 0,
+  "metadata": {
+    "log_provider": "kyverno",
+    "product": {
+      "name": "kyverno",
+      "vendor_name": "kyverno",
+      "version": "v1.12.0"
+    },
+    "uid": "evidence-03",
+    "version": "v1.12.0"
+  },
+  "num_files": 1,
+  "observables": [
+    {
+      "name": "evidence.json",
+      "type": "File Name",
+      "type_id": 7
+    }
+  ],
+  "osint": null,
+  "scan": {
+    "type_id": 0
+  },
+  "severity": "medium",
+  "severity_id": 0,
+  "status": "success",
+  "status_id": 1,
+  "time": 1765290670000,
+  "type_name": "",
+  "type_uid": 60070,
+  "policy": {
+    "data": "{\"name\":\"Enforce MFA\",\"description\":\"Multi-factor authentication required\",\"sources\":[{\"name\":\"OSPS-QA-09.01\",\"policy\":[\"github.com/org/security-policies\"],\"ruleData\":{},\"config\":{\"include\":[\"enforce_mfa\"]}}]}",
+    "desc": "Multi-factor authentication required",
+    "name": "Enforce MFA",
+    "uid": "enforce_mfa"
+  },
+  "action": "observed",
+  "action_id": 3
+}

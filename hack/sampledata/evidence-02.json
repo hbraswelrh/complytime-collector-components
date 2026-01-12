@@ -1,0 +1,49 @@
+{
+  "activity_id": 0,
+  "activity_name": "",
+  "category_name": "Application Activity",
+  "category_uid": 6,
+  "class_name": "Scan Activity",
+  "class_uid": 6007,
+  "cloud": {
+    "provider": ""
+  },
+  "event_day": 0,
+  "metadata": {
+    "log_provider": "opa",
+    "product": {
+      "name": "opa",
+      "vendor_name": "open-policy-agent",
+      "version": "v0.60.0"
+    },
+    "uid": "evidence-02",
+    "version": "v0.60.0"
+  },
+  "num_files": 1,
+  "observables": [
+    {
+      "name": "evidence.json",
+      "type": "File Name",
+      "type_id": 7
+    }
+  ],
+  "osint": null,
+  "scan": {
+    "type_id": 0
+  },
+  "severity": "critical",
+  "severity_id": 0,
+  "status": "failure",
+  "status_id": 2,
+  "time": 1765294270000,
+  "type_name": "",
+  "type_uid": 60070,
+  "policy": {
+    "data": "{\"name\":\"Require Signed Commits\",\"description\":\"All commits must be cryptographically signed\",\"sources\":[{\"name\":\"OSPS-QA-08.02\",\"policy\":[\"github.com/org/policies\"],\"ruleData\":{},\"config\":{\"include\":[\"require_signed_commits\"]}}]}",
+    "desc": "All commits must be cryptographically signed",
+    "name": "Require Signed Commits",
+    "uid": "require_signed_commits"
+  },
+  "action": "observed",
+  "action_id": 3
+}

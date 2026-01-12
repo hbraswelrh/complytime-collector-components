@@ -1,0 +1,49 @@
+{
+  "activity_id": 0,
+  "activity_name": "",
+  "category_name": "Application Activity",
+  "category_uid": 6,
+  "class_name": "Scan Activity",
+  "class_uid": 6007,
+  "cloud": {
+    "provider": ""
+  },
+  "event_day": 0,
+  "metadata": {
+    "log_provider": "conforma",
+    "product": {
+      "name": "conforma",
+      "vendor_name": "conforma",
+      "version": "v0.8.6"
+    },
+    "uid": "evidence-07",
+    "version": "v0.8.6"
+  },
+  "num_files": 1,
+  "observables": [
+    {
+      "name": "evidence.json",
+      "type": "File Name",
+      "type_id": 7
+    }
+  ],
+  "osint": null,
+  "scan": {
+    "type_id": 0
+  },
+  "severity": "critical",
+  "severity_id": 0,
+  "status": "failure",
+  "status_id": 2,
+  "time": 1765276270000,
+  "type_name": "",
+  "type_uid": 60070,
+  "policy": {
+    "data": "{\"name\":\"Enforce Security Scan\",\"description\":\"Security scanning must pass before merge\",\"sources\":[{\"name\":\"OSPS-QA-13.01\",\"policy\":[\"github.com/org/security-policies\"],\"ruleData\":{},\"config\":{\"include\":[\"enforce_security_scan\"]}}]}",
+    "desc": "Security scanning must pass before merge",
+    "name": "Enforce Security Scan",
+    "uid": "enforce_security_scan"
+  },
+  "action": "observed",
+  "action_id": 3
+}
