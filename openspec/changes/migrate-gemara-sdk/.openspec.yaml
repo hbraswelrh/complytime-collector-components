@@ -1,0 +1,4 @@
+schema: spec-driven
+created: 2026-04-20
+title: "Migrate from ossf/gemara/layer4 to gemaraproj/go-gemara v0.3.0"
+status: implemented
