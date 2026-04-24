@@ -75,6 +75,7 @@ All commits MUST use Conventional Commits, the `-s` flag (Signed-off-by), and in
 ## Recent Changes
 
 - migrate-gemara-sdk: Migrated from `github.com/ossf/gemara/layer4` to `github.com/gemaraproj/go-gemara` v0.3.0, corrected GEMARA layer numbering in attribute model, regenerated docs
+  - Spec: `openspec/specs/gemara-evidence-attributes/spec.md`
 
 <!-- MANUAL ADDITIONS START -->
 <!-- MANUAL ADDITIONS END -->
