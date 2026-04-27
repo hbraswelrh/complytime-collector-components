@@ -56,7 +56,7 @@ jobs:
       security-events: write  # upload SARIF results
       id-token: write         # OIDC for registry auth
       actions: read           # access reusable workflow
-    uses: complytime/org-infra/.github/workflows/reusable_vuln_scan.yml@main
+    uses: complytime/org-infra/.github/workflows/reusable_vuln_scan.yml@9205a3ac6b76b75dbe6e22b2f0f330bc8edbeb38 # main
     with:
       enable_osv: true
       enable_trivy_source: true
@@ -76,7 +76,7 @@ jobs:
       id-token: write      # OIDC for registry auth
       actions: read        # access reusable workflow
       attestations: write  # publish build provenance
-    uses: complytime/org-infra/.github/workflows/reusable_publish_ghcr.yml@main
+    uses: complytime/org-infra/.github/workflows/reusable_publish_ghcr.yml@9205a3ac6b76b75dbe6e22b2f0f330bc8edbeb38 # main
     with:
       component_name: beacon-distro
       containerfile_path: beacon-distro/Containerfile.collector
@@ -100,7 +100,7 @@ jobs:
       security-events: write  # upload SARIF results
       id-token: write         # OIDC for registry auth
       actions: read           # required by osv_scanner nested job
-    uses: complytime/org-infra/.github/workflows/reusable_vuln_scan.yml@main
+    uses: complytime/org-infra/.github/workflows/reusable_vuln_scan.yml@9205a3ac6b76b75dbe6e22b2f0f330bc8edbeb38 # main
     with:
       enable_osv: false
       enable_trivy_source: false
@@ -119,7 +119,7 @@ jobs:
     permissions:
       packages: write  # attach signature to image
       id-token: write  # OIDC for keyless signing
-    uses: complytime/org-infra/.github/workflows/reusable_sign_and_verify.yml@main
+    uses: complytime/org-infra/.github/workflows/reusable_sign_and_verify.yml@9205a3ac6b76b75dbe6e22b2f0f330bc8edbeb38 # main
     with:
       image_name: ${{ needs.build-beacon-distro.outputs.image }}
       digest: ${{ needs.build-beacon-distro.outputs.digest }}
