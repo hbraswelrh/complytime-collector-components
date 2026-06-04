@@ -48,11 +48,18 @@ for CF in "${CONTAINERFILES[@]}"; do
 done
 
 # ── Sync CI workflow GO_VERSION ──────────────────────────────────
-CI_LOCAL=".github/workflows/ci_local.yml"
-if [[ -f "$CI_LOCAL" ]]; then
-	perl -i -pe "s{^(\s*GO_VERSION:\s*)\S+}{\${1}$GO_MINOR}" "$CI_LOCAL"
-	echo "  CI workflow: $CI_LOCAL (GO_VERSION: $GO_MINOR)"
-fi
+# Pin to full patch version (e.g., 1.26.3) to prevent setup-go from
+# auto-upgrading to a newer patch and triggering version-check drift.
+CI_WORKFLOWS=(
+	".github/workflows/ci_local.yml"
+	".github/workflows/ci_sonarcloud.yml"
+)
+for CI_WF in "${CI_WORKFLOWS[@]}"; do
+	if [[ -f "$CI_WF" ]]; then
+		perl -i -pe "s{^(\s*GO_VERSION:\s*)\S+}{\${1}$GO_VERSION}" "$CI_WF"
+		echo "  CI workflow: $CI_WF (GO_VERSION: $GO_VERSION)"
+	fi
+done
 
 # ── Sync documentation ──────────────────────────────────────────
 DOCS=(

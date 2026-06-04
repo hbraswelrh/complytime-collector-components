@@ -64,6 +64,24 @@ for GOMOD in "${GO_MODS[@]}"; do
 	fi
 done
 
+# Check CI workflow GO_VERSION pins match the full patch version
+CI_WORKFLOWS=(
+	".github/workflows/ci_local.yml"
+	".github/workflows/ci_sonarcloud.yml"
+)
+for CI_WF in "${CI_WORKFLOWS[@]}"; do
+	if [[ ! -f "$CI_WF" ]]; then
+		continue
+	fi
+	CI_GO=$(grep -E '^\s*GO_VERSION:' "$CI_WF" | head -1 | sed 's/.*GO_VERSION:\s*//' | tr -d ' ')
+	if [[ "$CI_GO" != "$GO_VERSION" ]]; then
+		echo "  FAIL: $CI_WF has GO_VERSION: $CI_GO (expected $GO_VERSION)"
+		FAILED=1
+	else
+		echo "  OK: $CI_WF"
+	fi
+done
+
 echo ""
 
 # ── OTel version consistency ────────────────────────────────────
