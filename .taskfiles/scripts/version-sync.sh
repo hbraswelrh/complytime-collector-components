@@ -48,7 +48,7 @@ for CF in "${CONTAINERFILES[@]}"; do
 done
 
 # ── Sync CI workflow GO_VERSION ──────────────────────────────────
-# Pin to full patch version (e.g., 1.26.3) to prevent setup-go from
+# Pin to full patch version (e.g., 1.26.4) to prevent setup-go from
 # auto-upgrading to a newer patch and triggering version-check drift.
 CI_WORKFLOWS=(
 	".github/workflows/ci_local.yml"

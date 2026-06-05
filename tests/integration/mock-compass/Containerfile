@@ -1,4 +1,4 @@
-FROM golang:1.26.3@sha256:e3665e241a474aba30bbfaf177cfa88e1913e970c83bd86889cacfb67d6e7e51 AS build
+FROM golang:1.26.4@sha256:82c8738642b733f7d2f44b057375ec90d17c294ff6689aedc628afa9c2b2ceff AS build
 WORKDIR /build
 COPY go.mod ./
 RUN go mod download

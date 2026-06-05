@@ -36,7 +36,7 @@ It complements the [DESIGN.md](./DESIGN.md) document by focusing on the practica
 
 ### Required Software
 
-- **Go 1.26+**: The project uses Go 1.26.3
+- **Go 1.26+**: The project uses Go 1.26.4
 - **Podman**: For containerized development and deployment (Docker is not supported)
 - **Task**: For build automation ([installation guide](https://taskfile.dev/installation/))
 - **Git**: For version control

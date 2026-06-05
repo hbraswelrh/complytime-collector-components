@@ -1,6 +1,6 @@
 module github.com/complytime/complybeacon
 
-go 1.26.3
+go 1.26.4
 
 tool github.com/unbound-force/gaze/cmd/gaze
 
@@ -26,7 +26,7 @@ require (
 	github.com/gkampitakis/go-snaps v0.5.22 // indirect
 	github.com/go-logfmt/logfmt v0.6.1 // indirect
 	github.com/go-task/slim-sprig/v3 v3.0.0 // indirect
-	github.com/google/pprof v0.0.0-20260507013755-92041b743c96 // indirect
+	github.com/google/pprof v0.0.0-20260604005048-7023385849c0 // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/lucasb-eyer/go-colorful v1.4.0 // indirect
 	github.com/mattn/go-isatty v0.0.22 // indirect
@@ -45,7 +45,7 @@ require (
 	github.com/tidwall/match v1.2.0 // indirect
 	github.com/unbound-force/gaze v1.5.0 // indirect
 	github.com/xo/terminfo v0.0.0-20220910002029-abceb7e1c41e // indirect
-	golang.org/x/exp v0.0.0-20260529124908-c761662dc8c9 // indirect
+	golang.org/x/exp v0.0.0-20260603202125-055de637280b // indirect
 	golang.org/x/mod v0.36.0 // indirect
 	golang.org/x/net v0.55.0 // indirect
 	golang.org/x/sync v0.20.0 // indirect

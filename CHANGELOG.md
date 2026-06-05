@@ -6,6 +6,10 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Security
+
+- Bump Go from 1.26.3 to 1.26.4 across all modules, CI workflows, and container build stages. Fixes CVE-2026-42507 (`net/textproto` error message injection) and CVE-2026-27145 (`crypto/x509` inefficient hostname parsing) in the compiled collector binary.
+
 ### Added
 
 - **proofwatch** library for collecting compliance evidence and emitting it as OpenTelemetry logs. Supports TLS-secured collector connections. Exposes OTel metrics counters that track evidence volume per control.
