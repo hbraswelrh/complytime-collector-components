@@ -80,7 +80,7 @@ tasks:
       - task: :version:sync
       - task: build
         vars:
-          { USE_GHCR_IMAGE: "{{.USE_GHCR_IMAGE}}", GHCR_TAG: "{{.GHCR_TAG}}" }
+          {USE_GHCR_IMAGE: "{{.USE_GHCR_IMAGE}}", GHCR_TAG: "{{.GHCR_TAG}}"}
       - |
         if [[ "{{.USE_GHCR_IMAGE}}" == "true" ]]; then
           echo "Using GHCR image: {{.GHCR_IMAGE}}:{{.GHCR_TAG}}"
@@ -114,4 +114,4 @@ tasks:
         vars:
           GHCR_TAG_INPUT: "{{.GHCR_TAG_INPUT}}"
       - task: :dev:test
-      - defer: { task: undeploy }
+      - defer: {task: undeploy}
