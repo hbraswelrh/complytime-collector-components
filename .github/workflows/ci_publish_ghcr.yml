@@ -91,8 +91,8 @@ jobs:
       image_vendor: ComplyTime
       force_rebuild: ${{ inputs.force_rebuild || false }}
       allow_unprotected_ref: true # Allow workflow_dispatch on non-default branches
-    # NOTE: Outputs from the reusable workflow (image, digest, image_ref, tags)
-    # are automatically available to downstream jobs via needs.build-beacon-distro.outputs.*
+  # NOTE: Outputs from the reusable workflow (image, digest, image_ref, tags)
+  # are automatically available to downstream jobs via needs.build-beacon-distro.outputs.*
 
   # ═══════════════════════════════════════════════════════════════════════════
   # QUAY CREDENTIAL CHECK (for unstable promotion)

@@ -51,13 +51,13 @@ tasks:
           fi
     cmds:
       - task: validate-profile
-        vars: { PROFILE: "{{.PROFILE}}" }
+        vars: {PROFILE: "{{.PROFILE}}"}
         if: '[ -n "{{.PROFILE}}" ]'
       - task: ensure-certs
       - task: build-images
         vars:
           USE_GHCR_IMAGE: "{{.USE_GHCR_IMAGE}}"
-      - for: { var: PROFILES }
+      - for: {var: PROFILES}
         task: test-layer
         vars:
           PROFILE: "{{.ITEM}}"
@@ -153,7 +153,7 @@ tasks:
       - mkdir -p .test-output/integration/data && chmod 777 .test-output/integration/data
       - "{{.COMPOSE_CMD}} {{.COMPOSE_FILES}} {{.COMPOSE_PROFILES}} up -d"
       - task: wait
-        vars: { PROFILE: "{{.PROFILE}}", COMPOSE_FILES: "{{.COMPOSE_FILES}}" }
+        vars: {PROFILE: "{{.PROFILE}}", COMPOSE_FILES: "{{.COMPOSE_FILES}}"}
       - mkdir -p {{.GINKGO_OUTPUT_DIR}}
       - go tool ginkgo run {{.GINKGO_FLAGS}} --output-dir={{.GINKGO_OUTPUT_DIR}} --junit-report=junit-{{.PROFILE}}.xml {{.TEST_DIR}}
 
@@ -208,11 +208,11 @@ tasks:
     cmds:
       - task: ensure-certs
       - task: build-if-local
-        vars: { USE_GHCR_IMAGE: "{{.USE_GHCR_IMAGE}}" }
+        vars: {USE_GHCR_IMAGE: "{{.USE_GHCR_IMAGE}}"}
       - mkdir -p .test-output/integration/data && chmod 777 .test-output/integration/data
       - "{{.COMPOSE_CMD}} {{.COMPOSE_FILES}} {{.COMPOSE_PROFILES}} up -d --build"
       - task: wait
-        vars: { PROFILE: "{{.PROFILE}}", COMPOSE_FILES: "{{.COMPOSE_FILES}}" }
+        vars: {PROFILE: "{{.PROFILE}}", COMPOSE_FILES: "{{.COMPOSE_FILES}}"}
       - cmd: 'echo "Stack running. Run tests with: GOWORK=off go tool ginkgo run -vv {{.TEST_DIR}}"'
       - cmd: 'echo "Tear down with: task integration:down"'
 
@@ -231,7 +231,7 @@ tasks:
       - test "{{.USE_GHCR_IMAGE}}" = "true"
     cmds:
       - task: build-if-local
-        vars: { USE_GHCR_IMAGE: "{{.USE_GHCR_IMAGE}}" }
+        vars: {USE_GHCR_IMAGE: "{{.USE_GHCR_IMAGE}}"}
 
   wait:
     internal: true
