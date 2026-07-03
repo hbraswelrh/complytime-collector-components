@@ -22,8 +22,6 @@ jobs:
       contents: read
       actions: read
       security-events: write
-      packages: write
-      id-token: write
     uses: complytime/org-infra/.github/workflows/reusable_vuln_scan.yml@638b2037394ca0f0b860a135c7c27dce75fd3c03 # v0.5.0
     with:
       # OSV focuses on known CVEs in dependencies; Trivy adds broader coverage
