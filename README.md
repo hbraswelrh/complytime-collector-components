@@ -160,11 +160,12 @@ Production deployments should use a dedicated collector configuration with `disa
 
 ### 4. Authentication
 
-Beacon bundles an OTel Collector auth extension (`oidcauthextension`) but does **not** enable it by default — the shipped configs prioritize development simplicity. A `bearertokenauthextension` is also available in the extension registry for outbound authentication.
+Beacon bundles two OTel Collector auth extensions but does **not** enable them by default — the shipped configs prioritize development simplicity.
 
-| Extension           | Direction | Purpose                                               |
-|---------------------|-----------|-------------------------------------------------------|
-| `oidcauthextension` | Inbound   | Validates OIDC (JWT) tokens on incoming OTLP requests |
+| Extension                  | Direction | Purpose                                                  |
+|----------------------------|-----------|----------------------------------------------------------|
+| `oidcauthextension`        | Inbound   | Validates OIDC (JWT) tokens on incoming OTLP requests    |
+| `bearertokenauthextension` | Outbound  | Attaches a static bearer token to outgoing HTTP requests |
 
 #### Configuring OIDC on OTLP Receivers
 
