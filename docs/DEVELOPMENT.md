@@ -198,8 +198,8 @@ You've mixed stable/experimental versions from different releases. Reset to the 
 
 ```bash
 cd proofwatch
-# Downgrade to current pinned versions
-go get go.opentelemetry.io/otel/log@v1.57.0
+# Downgrade to current pinned versions (example — use the versions from Step 3)
+go get go.opentelemetry.io/collector/pdata@v1.61.0
 go mod tidy
 cd ..
 task version:sync
